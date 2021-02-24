@@ -53,7 +53,7 @@ public class CharacterController : MonoBehaviour
         capsuleCollider = this.GetComponent<CapsuleCollider>();
 
         // Set the jump Velocity.
-        jumpVelocity = new Vector3(0, jumpHeight, 0);
+        jumpVelocity = Vector3.up * jumpHeight;
 
         mainCam = Camera.main.transform;
     }
@@ -126,9 +126,9 @@ public class CharacterController : MonoBehaviour
             if (Physics.Raycast(check.position, Vector3.down, out hit, groundDistance + 0.05f))
             {
                 // Found the ground.
-                if (!hit.transform.GetComponent<Collider>().isTrigger)
+                if (hit.transform.TryGetComponent(out Collider collider))
                 {
-                    return true;
+                    if (!collider.isTrigger) { return true; }
                 }
             }
         }
