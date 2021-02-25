@@ -13,6 +13,8 @@ public class CharacterMaster : MonoBehaviour
 
     public bool CanMove { get; set; }
 
+    public Transform projectileSpawnPos;
+
     private void Start()
     {
         Controller = GetComponent<CharacterController>();
