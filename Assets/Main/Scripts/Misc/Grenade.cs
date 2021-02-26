@@ -6,6 +6,8 @@ public class Grenade : MonoBehaviour
     private Transform mainCam;
     private bool isCountingDown;
 
+    public float grenadeDamage = 60f;
+
     [SerializeField] private float forwardForce = 10f;
     [SerializeField] private float upwardsForce = 4f;
     [SerializeField] private float timeTillExplode = 1.5f;
@@ -70,9 +72,13 @@ public class Grenade : MonoBehaviour
         for (int i = 0; i < targets.Length; i++)
         {
             // Apply damage if they have health. TODO Kenneth - EntityHealth not yet implemented.
-            if (targets[i].TryGetComponent(out CharacterMaster target))
+            if (targets[i].TryGetComponent(out EntityHealth target))
             {
-                Debug.Log("Apply Damage to target");
+                if (targets[i].gameObject != this.gameObject)
+                {
+                    target.DealDamage(grenadeDamage);
+                    Debug.Log("Apply Damage to target");
+                }
             }
         }
     }
