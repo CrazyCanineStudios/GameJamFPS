@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroySound: {fileID: 8300000, guid: 42b161fc2e1eabf49ae85276394ce862, type: 3}
-  destroyDelay: 0.3
+  destroyDelay: 3
   impactForce: 15
 --- !u!1 &100002
 GameObject:

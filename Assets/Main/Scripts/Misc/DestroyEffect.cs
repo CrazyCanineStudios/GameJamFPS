@@ -13,9 +13,7 @@ public class DestroyEffect : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
         {
             children[i] = transform.GetChild(i);
-        }  
-        
-        transform.DetachChildren();
+        }         
 
         // Add explosion force from center of object.
         foreach (Transform child in children)

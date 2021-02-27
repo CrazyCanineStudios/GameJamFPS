@@ -3,6 +3,7 @@
 public class CharacterGrenade : CharacterAbility
 {
     public GameObject grenadePrefab;
+    public float grenadeDamage = 60f;
     public float rechargeTime = 2f;
     private float currentRechargeTime;
     private GameObject currentGrenade;
@@ -31,6 +32,12 @@ public class CharacterGrenade : CharacterAbility
 
         // Try and get the grenade's collider.
         currentGrenade.TryGetComponent(out Collider grenadeCol);
+
+        // Try and get the grenade script.
+        currentGrenade.TryGetComponent(out Grenade grenade);
+
+        // Set the grenade damage.
+        grenade.grenadeDamage = grenadeDamage * _master.RecieveAbilityEffectiveness(this);
 
         // Disable collision between player and grenade.
         Physics.IgnoreCollision(grenadeCol, _master.Capsule);

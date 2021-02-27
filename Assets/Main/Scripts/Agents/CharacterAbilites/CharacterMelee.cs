@@ -15,6 +15,8 @@ public class CharacterMelee : CharacterAbility
 
     public float meleeDamage = 50f;
 
+    private float actualMeleeDamage;
+
     private float actualTime;
     private Vector3 direction;
     private bool isMeleeAttack;
@@ -57,7 +59,7 @@ public class CharacterMelee : CharacterAbility
             _master.Body.AddForce(direction * lungeForce);
             actualTime += Time.fixedDeltaTime;
 
-            lens.intensity.value = Mathf.Lerp(-40, 0, actualTime / lungeTime);
+            lens.intensity.value = Mathf.Lerp(-20, 0, actualTime / 0.4f);
             lens.scale.value = Mathf.Lerp(1.1f, 1, actualTime / 0.2f);           
 
             Collider[] targets = Physics.OverlapSphere(transform.position + meleeOffset, meleeRadius);
@@ -68,7 +70,7 @@ public class CharacterMelee : CharacterAbility
                 {
                     if (enemyBuffer.Contains(targets[i].gameObject) == false)
                     {
-                        target.DealDamage(meleeDamage);
+                        target.DealDamage(actualMeleeDamage);
                         Debug.Log("Apply Damage to target");
                         // Add target to buffer
                         enemyBuffer.Add(targets[i].gameObject);
@@ -85,6 +87,7 @@ public class CharacterMelee : CharacterAbility
     protected override void OnAbilityStart()
     {
         isMeleeAttack = true;
+        actualMeleeDamage = meleeDamage * _master.RecieveAbilityEffectiveness(this);
 
         Debug.Log("Melee Attack");
         // Get all targets inside the melee radius.
