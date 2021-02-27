@@ -7,9 +7,13 @@ public class EnemyController : MonoBehaviour
     public float speed = 1;
     private CharacterMaster player;
     private bool hasAttacked;
+    [SerializeField]
+    private Animator anim;
+
 
     private void Awake()
     {
+        anim = GetComponentInChildren<Animator>();
         player = CharacterMaster.instance;
     }
 
@@ -24,8 +28,10 @@ public class EnemyController : MonoBehaviour
 
     public void TrackPlayer()
     {
+        anim.SetTrigger("charge");
         transform.position = Vector3.Slerp(transform.position, player.transform.position, speed * Time.deltaTime);
     }
+
 
     public void AttackPlayer()
     {

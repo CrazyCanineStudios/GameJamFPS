@@ -10,9 +10,12 @@ public class CharacterShoot : CharacterAbility
     public float gunDamage = 50.0f;
     private float actualGunDamage;
 
+    public Animator anim;
+
     [SerializeField] private Transform gunMuzzle = null;
     [SerializeField] private GameObject explosionPrefab = null;
     [SerializeField] private GameObject bulletPrefab = null;
+
 
     void Update()
     {
@@ -34,6 +37,7 @@ public class CharacterShoot : CharacterAbility
         actualGunDamage = gunDamage * _master.RecieveAbilityEffectiveness(this);
 
         Debug.Log("Shoot Gun");
+        anim.SetTrigger("shot");
         GameObject explosion = Instantiate(explosionPrefab, gunMuzzle);
         GameObject bullet = Instantiate(bulletPrefab, gunMuzzle);
         bullet.transform.SetParent(null);

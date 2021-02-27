@@ -13,6 +13,8 @@ public class CharacterMelee : CharacterAbility
     public float lungeTime = 0.3f;
     public float lungeForce = 500f;
 
+    public Animator anim;
+
     public float meleeDamage = 50f;
 
     private float actualMeleeDamage;
@@ -58,7 +60,6 @@ public class CharacterMelee : CharacterAbility
         {
             _master.Body.AddForce(direction * lungeForce);
             actualTime += Time.fixedDeltaTime;
-
             lens.intensity.value = Mathf.Lerp(-20, 0, actualTime / 0.4f);
             lens.scale.value = Mathf.Lerp(1.1f, 1, actualTime / 0.2f);           
 
@@ -87,6 +88,7 @@ public class CharacterMelee : CharacterAbility
     protected override void OnAbilityStart()
     {
         isMeleeAttack = true;
+        anim.SetTrigger("melee");
         actualMeleeDamage = meleeDamage * _master.RecieveAbilityEffectiveness(this);
 
         Debug.Log("Melee Attack");
