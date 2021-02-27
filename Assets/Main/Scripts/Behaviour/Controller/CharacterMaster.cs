@@ -5,8 +5,11 @@
 /// </summary>
 public class CharacterMaster : MonoBehaviour
 {
+    public static CharacterMaster instance;
     // Character Components.
     public CharacterController Controller { get; private set; }
+
+    public EntityHealth Health { get; private set; }
     public Rigidbody Body { get; private set; }
     public CapsuleCollider Capsule { get; private set; }
     public string CurrentState { get; private set; }
@@ -22,7 +25,9 @@ public class CharacterMaster : MonoBehaviour
 
     private void Start()
     {
+        instance = this;
         Controller = GetComponent<CharacterController>();
+        Health = GetComponent<EntityHealth>();
         Body = GetComponent<Rigidbody>();
         Capsule = GetComponent<CapsuleCollider>();
         CurrentState = "Grounded";

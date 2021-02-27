@@ -5226,7 +5226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d08214065a179943a69596d73a95f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 100000, guid: 6385e85ec369bac4c8b20fdb297d102b, type: 3}
+  enemyPrefab: {fileID: 2921857240195862176, guid: 83bc3a58c98bad6478f494688d4086e5, type: 3}
   spawnZones: []
   spawnDelay: 5
 --- !u!4 &1367837300

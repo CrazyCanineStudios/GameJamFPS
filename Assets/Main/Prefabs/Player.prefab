@@ -83,6 +83,9 @@ GameObject:
   - component: {fileID: 5181766777312246678}
   - component: {fileID: 5181766777312246679}
   - component: {fileID: 5181766777312246684}
+  - component: {fileID: 1658553921}
+  - component: {fileID: 1658553922}
+  - component: {fileID: 8555524154333863743}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -119,6 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnPos: {fileID: 360643901}
+  abilityEffectiveness: 1
+  effectivenessLoss: 0.1
 --- !u!114 &5181766777312246681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +189,65 @@ MonoBehaviour:
   BlockedStates:
   - '"Stunned"'
   grenadePrefab: {fileID: 6468942249379795726, guid: 908c84d0c26af93419a75ef7ce858477, type: 3}
+  grenadeDamage: 60
   rechargeTime: 2
+--- !u!114 &1658553921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5181766777312246677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b055808cbc8f1142a92edafc832534b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowAbility: 1
+  BlockedStates: []
+  rechargeTime: 2
+  meleeOffset: {x: 0, y: 0, z: 0}
+  meleeRadius: 1
+  lungeTime: 0.7
+  lungeForce: 800
+  meleeDamage: 100
+  postProcessVolume: {fileID: 0}
+--- !u!114 &1658553922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5181766777312246677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e98f4b558cf6640bdb825649d8f9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowAbility: 1
+  BlockedStates: []
+  rechargeTime: 1
+  gunDamage: 50
+  gunMuzzle: {fileID: 360643901}
+  explosionPrefab: {fileID: 328327068949570214, guid: a0c429f2c9f15af44a3cf54437dfd8d2, type: 3}
+  bulletPrefab: {fileID: 480096704618920955, guid: 1e5dd7f264138d3488e857a6a42399a1, type: 3}
+--- !u!114 &8555524154333863743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5181766777312246677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4f72ae7c6fc154ca4e45db859d62eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  deathPrefab: {fileID: 0}
+  inheritParentScale: 0
+  scaleMultiplier: 0
 --- !u!1 &5181766777331234233
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,15 +649,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e993883954d121c498ce7cdd13a1110a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.23
+      value: 0.387
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e993883954d121c498ce7cdd13a1110a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.08
+      value: 0.055
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e993883954d121c498ce7cdd13a1110a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.357
+      value: 0.746
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e993883954d121c498ce7cdd13a1110a, type: 3}
       propertyPath: m_LocalRotation.x
