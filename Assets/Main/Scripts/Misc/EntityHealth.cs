@@ -5,7 +5,7 @@ using UnityEngine;
 public class EntityHealth : MonoBehaviour
 {
     public float maxHealth;
-    private float currentHealth;
+    public float currentHealth;
     public GameObject deathPrefab;
     public bool inheritParentScale;
     public float scaleMultiplier;
