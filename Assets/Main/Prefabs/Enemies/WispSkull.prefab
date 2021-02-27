@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 0
   deathPrefab: {fileID: 1146961906002798, guid: 04f6f308bd2d35947a3a6b2a626d1980, type: 3}
   inheritParentScale: 0
   scaleMultiplier: 0
@@ -129,6 +130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  anim: {fileID: 0}
+  attackSfx: {fileID: 1722579547225285009, guid: 71798da2944aaa943b7592e00407a435, type: 3}
 --- !u!54 &-2474379451240381866
 Rigidbody:
   m_ObjectHideFlags: 0
