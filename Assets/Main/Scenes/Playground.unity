@@ -3403,53 +3403,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1658553921, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-      propertyPath: anim
+      propertyPath: postProcessVolume
       value: 
-      objectReference: {fileID: 2020228654}
-    - target: {fileID: 1658553922, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 2020228654}
-    - target: {fileID: 888628247478068854, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 888628247478068854, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 888628247478068854, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 888628247478068854, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 888628247478068854, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 888628247478068854, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 888628247478068854, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.746
-      objectReference: {fileID: 0}
-    - target: {fileID: 888628247478068854, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 888628247478068854, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.387
-      objectReference: {fileID: 0}
-    - target: {fileID: 888628247478068854, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.055
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1468638081}
     - target: {fileID: 5181766777312246677, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3498,10 +3454,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6536172740988320780, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 6dd3967bfabcc684faa069e5e136a859, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
 --- !u!4 &843826640 stripped
@@ -6538,33 +6490,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6c82a61f720db4148a40eebadf877456, type: 3}
   m_PrefabInstance: {fileID: 1658432681}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1658553914 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5181766777312246677, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-  m_PrefabInstance: {fileID: 843826639}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1658553921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658553914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b055808cbc8f1142a92edafc832534b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allowAbility: 1
-  BlockedStates: []
-  rechargeTime: 2
-  meleeOffset: {x: 0, y: 0, z: 0}
-  meleeRadius: 1
-  lungeTime: 0.7
-  lungeForce: 800
-  anim: {fileID: 0}
-  meleeDamage: 100
-  postProcessVolume: {fileID: 1468638081}
 --- !u!1001 &1668940475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8190,11 +8115,6 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
---- !u!95 &2020228654 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6536172740988320780, guid: 0d8d61a0f608f834395ee01333728277, type: 3}
-  m_PrefabInstance: {fileID: 843826639}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2020760981
 PrefabInstance:
   m_ObjectHideFlags: 0

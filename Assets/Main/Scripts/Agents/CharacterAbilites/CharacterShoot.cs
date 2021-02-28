@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CharacterShoot : CharacterAbility
 {
@@ -34,22 +32,26 @@ public class CharacterShoot : CharacterAbility
 
     protected override void OnAbilityStart()
     {
-        actualGunDamage = gunDamage * _master.RecieveAbilityEffectiveness(this);
+        // Update ability power for this weapon
+        _master.ChangeAbilityPower(this);
+        actualGunDamage = gunDamage * abilityPower;
 
+        // Shoot gun
         Debug.Log("Shoot Gun");
         anim.SetTrigger("shot");
-        GameObject explosion = Instantiate(explosionPrefab, gunMuzzle);
+        Instantiate(explosionPrefab, gunMuzzle);
         GameObject bullet = Instantiate(bulletPrefab, gunMuzzle);
         bullet.transform.SetParent(null);
 
-        RaycastHit hit;
-        Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity);
+        // Drawn line cast, deal damage if hits enemy
+        Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hit, Mathf.Infinity);
         if (hit.collider.GetComponent<EntityHealth>())
         {
             Debug.Log("Hit Enemy");
             hit.collider.GetComponent<EntityHealth>().DealDamage(actualGunDamage);
         }
 
+        // Update cooldown
         currentRechargeTime = rechargeTime;
     }
 }

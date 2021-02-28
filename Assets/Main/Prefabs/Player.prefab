@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allowAbility: 1
+  abilityPower: 1
   BlockedStates:
   - '"Stunned"'
   grenadePrefab: {fileID: 6468942249379795726, guid: 908c84d0c26af93419a75ef7ce858477, type: 3}
@@ -204,12 +205,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allowAbility: 1
+  abilityPower: 1
   BlockedStates: []
   rechargeTime: 2
   meleeOffset: {x: 0, y: 0, z: 0}
   meleeRadius: 1
   lungeTime: 0.7
   lungeForce: 800
+  anim: {fileID: 6536172740988320780}
   meleeDamage: 100
   postProcessVolume: {fileID: 0}
 --- !u!114 &1658553922
@@ -225,9 +228,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allowAbility: 1
+  abilityPower: 1
   BlockedStates: []
   rechargeTime: 1
   gunDamage: 50
+  anim: {fileID: 6536172740988320780}
   gunMuzzle: {fileID: 360643901}
   explosionPrefab: {fileID: 328327068949570214, guid: a0c429f2c9f15af44a3cf54437dfd8d2, type: 3}
   bulletPrefab: {fileID: 480096704618920955, guid: 1e5dd7f264138d3488e857a6a42399a1, type: 3}
@@ -695,10 +700,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Pistol
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e993883954d121c498ce7cdd13a1110a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6dd3967bfabcc684faa069e5e136a859, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e993883954d121c498ce7cdd13a1110a, type: 3}
 --- !u!4 &888628247478068854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e993883954d121c498ce7cdd13a1110a, type: 3}
+  m_PrefabInstance: {fileID: 855600175911240093}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6536172740988320780 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: e993883954d121c498ce7cdd13a1110a, type: 3}
   m_PrefabInstance: {fileID: 855600175911240093}
   m_PrefabAsset: {fileID: 0}

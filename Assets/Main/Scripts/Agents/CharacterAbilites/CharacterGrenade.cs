@@ -37,7 +37,8 @@ public class CharacterGrenade : CharacterAbility
         currentGrenade.TryGetComponent(out Grenade grenade);
 
         // Set the grenade damage.
-        grenade.grenadeDamage = grenadeDamage * _master.RecieveAbilityEffectiveness(this);
+        _master.ChangeAbilityPower(this);
+        grenade.grenadeDamage = grenadeDamage * abilityPower;
 
         // Disable collision between player and grenade.
         Physics.IgnoreCollision(grenadeCol, _master.Capsule);

@@ -7,6 +7,7 @@ public class CharacterAbility : MonoBehaviour
     protected CharacterMaster _master;
 
     public bool allowAbility = true;
+	public float abilityPower = 1.0f;
 
     public string[] BlockedStates;
 
