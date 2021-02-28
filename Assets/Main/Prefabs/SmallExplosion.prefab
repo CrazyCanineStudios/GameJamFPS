@@ -14628,7 +14628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aa5c1e37409a9344a344c0468db383d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabSound: {fileID: 1297775994297274, guid: 819215a5dc7e40b4eb034ed58f2d69db, type: 3}
+  prefabSound: {fileID: 5334954657143078780, guid: 9776e6c54cf7bee4690160450f40c3d0, type: 3}
   destroyWhenDone: 1
   soundPrefabIsChild: 0
   pitchRandomMultiplier: 1.2
