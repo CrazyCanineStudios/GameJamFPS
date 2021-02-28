@@ -122,7 +122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnPos: {fileID: 360643901}
-  abilityEffectiveness: 1
   effectivenessLoss: 0.1
 --- !u!114 &5181766777312246681
 MonoBehaviour:
@@ -190,7 +189,7 @@ MonoBehaviour:
   BlockedStates:
   - '"Stunned"'
   grenadePrefab: {fileID: 6468942249379795726, guid: 908c84d0c26af93419a75ef7ce858477, type: 3}
-  grenadeDamage: 60
+  grenadeDamage: 100
   rechargeTime: 2
 --- !u!114 &1658553921
 MonoBehaviour:
@@ -231,7 +230,7 @@ MonoBehaviour:
   abilityPower: 1
   BlockedStates: []
   rechargeTime: 1
-  gunDamage: 50
+  gunDamage: 100
   anim: {fileID: 6536172740988320780}
   gunMuzzle: {fileID: 360643901}
   explosionPrefab: {fileID: 328327068949570214, guid: a0c429f2c9f15af44a3cf54437dfd8d2, type: 3}

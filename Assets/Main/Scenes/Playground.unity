@@ -997,6 +997,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &255282182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1137,6 +1138,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1efef72f7b6e02841bb59f6bc63a415f, type: 3}
   m_PrefabInstance: {fileID: 264916025}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &272193659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7402020304296417952, guid: f9b0c6e83dcd577469a008512a4ec459, type: 3}
+  m_PrefabInstance: {fileID: 7402020304550800280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &281817860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3103852503301613322, guid: 00a3a188a26033347b5d12eaec490738, type: 3}
@@ -1164,6 +1170,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1 &287701791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +1313,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &307538806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1518,7 +1526,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 508c859bfb1b5c74eab8fb12bb6c935d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -1864,6 +1872,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &409671565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2246,6 +2255,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &494871582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2566,6 +2576,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &558332806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3007,6 +3018,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &720243140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3091,6 +3103,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &762503567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3476,6 +3489,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1 &842374194 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c82a61f720db4148a40eebadf877456, type: 3}
@@ -3498,6 +3512,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &843826639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3652,6 +3667,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1 &871414702 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c82a61f720db4148a40eebadf877456, type: 3}
@@ -3674,6 +3690,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1 &896289171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c82a61f720db4148a40eebadf877456, type: 3}
@@ -3696,6 +3713,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &910687889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3932,6 +3950,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &933580184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4020,6 +4039,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &942079451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4112,6 +4132,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &964682203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4396,6 +4417,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &1048696136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4759,6 +4781,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1 &1120183085 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c82a61f720db4148a40eebadf877456, type: 3}
@@ -4781,6 +4804,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &1127545437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4941,6 +4965,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &1142900096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5169,6 +5194,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!4 &1173731531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3103852503301613322, guid: 00a3a188a26033347b5d12eaec490738, type: 3}
@@ -5416,6 +5442,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &1273982503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5644,6 +5671,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1 &1360938119 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c82a61f720db4148a40eebadf877456, type: 3}
@@ -5666,6 +5694,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &1364735334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5846,6 +5875,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1 &1441243352 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c82a61f720db4148a40eebadf877456, type: 3}
@@ -5868,6 +5898,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &1442382968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6148,6 +6179,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!4 &1501987138 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3103852503301613322, guid: 00a3a188a26033347b5d12eaec490738, type: 3}
@@ -6236,6 +6268,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &1545258424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6448,6 +6481,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1 &1629395747 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c82a61f720db4148a40eebadf877456, type: 3}
@@ -6470,6 +6504,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &1634917639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7016,6 +7051,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!4 &1765419662 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3103852503301613322, guid: 00a3a188a26033347b5d12eaec490738, type: 3}
@@ -7048,6 +7084,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1 &1854456470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c82a61f720db4148a40eebadf877456, type: 3}
@@ -7070,6 +7107,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1 &1875527547 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c82a61f720db4148a40eebadf877456, type: 3}
@@ -7092,6 +7130,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &1891426286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7507,6 +7546,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1 &1957090811
 GameObject:
   m_ObjectHideFlags: 0
@@ -8127,6 +8167,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1 &1998530650 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7065464363487103479, guid: 6d5dbf3422c71d3448199cf573b38c37, type: 3}
@@ -8228,6 +8269,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &2020760981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8487,6 +8529,7 @@ MonoBehaviour:
   deathPrefab: {fileID: 100000, guid: c5cd8a8ab5cefdb45a93d722b761f9bf, type: 3}
   inheritParentScale: 1
   scaleMultiplier: 2
+  isDead: 0
 --- !u!1001 &2073139289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8804,6 +8847,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 378057275}
+    - target: {fileID: 2386040677322477527, guid: 8f030c11254adf14d904080c370837f5, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386040677322477527, guid: 8f030c11254adf14d904080c370837f5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386040677322477527, guid: 8f030c11254adf14d904080c370837f5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3167458721393990253, guid: 8f030c11254adf14d904080c370837f5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8843,6 +8898,22 @@ PrefabInstance:
     - target: {fileID: 6628756592671020808, guid: 8f030c11254adf14d904080c370837f5, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6662105125404012465, guid: 8f030c11254adf14d904080c370837f5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6662105125404012465, guid: 8f030c11254adf14d904080c370837f5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928610753033417021, guid: 8f030c11254adf14d904080c370837f5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 272193659}
+    - target: {fileID: 8928610753033417021, guid: 8f030c11254adf14d904080c370837f5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f030c11254adf14d904080c370837f5, type: 3}

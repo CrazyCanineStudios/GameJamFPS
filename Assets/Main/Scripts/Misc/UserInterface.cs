@@ -8,6 +8,7 @@ public class UserInterface : MonoBehaviour
     [SerializeField] private Text gunDisplay = null;
     [SerializeField] private Text meleeDisplay = null;
     [SerializeField] private Text grenadeDisplay = null;
+    [SerializeField] private Text scoreDisplay = null;
 
     private void Update()
     {
@@ -27,6 +28,7 @@ public class UserInterface : MonoBehaviour
     private void UpdateUserInterface()
     {
         healthDisplay.text = player.Health.currentHealth.ToString();
+        scoreDisplay.text = Game.score.ToString();
         gunDisplay.text = player.ShootAbility.abilityPower.ToString();
         meleeDisplay.text = player.MeleeAbility.abilityPower.ToString();
         grenadeDisplay.text = player.GrenadeAbility.abilityPower.ToString();
