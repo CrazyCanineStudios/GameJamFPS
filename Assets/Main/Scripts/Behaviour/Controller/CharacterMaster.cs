@@ -12,13 +12,16 @@ public class CharacterMaster : MonoBehaviour
     public EntityHealth Health { get; private set; }
     public Rigidbody Body { get; private set; }
     public CapsuleCollider Capsule { get; private set; }
+    public CharacterShoot ShootAbility { get; private set; }
+    public CharacterMelee MeleeAbility { get; private set; }
+    public CharacterGrenade GrenadeAbility { get; private set; }
     public string CurrentState { get; private set; }
 
     public bool CanMove { get; set; }
 
     public Transform projectileSpawnPos;
 
-    [SerializeField] private float abilityEffectiveness = 1f;
+    //[SerializeField] private float abilityEffectiveness = 1f;
 
     private CharacterAbility previousAbility;
     [SerializeField] private float effectivenessLoss = 0.1f;
@@ -28,27 +31,54 @@ public class CharacterMaster : MonoBehaviour
         instance = this;
         Controller = GetComponent<CharacterController>();
         Health = GetComponent<EntityHealth>();
+        ShootAbility = GetComponent<CharacterShoot>();
+        MeleeAbility = GetComponent<CharacterMelee>();
+        GrenadeAbility = GetComponent<CharacterGrenade>();
         Body = GetComponent<Rigidbody>();
         Capsule = GetComponent<CapsuleCollider>();
         CurrentState = "Grounded";
         CanMove = true;
     }
 
-    public float RecieveAbilityEffectiveness(CharacterAbility curAbility)
+    //public float RecieveAbilityEffectiveness(CharacterAbility curAbility)
+    //{
+    //    if (previousAbility != null)
+    //    {
+    //        if (previousAbility == curAbility)
+    //        {
+    //            abilityEffectiveness -= effectivenessLoss;
+    //        }
+    //        else
+    //        {
+    //            abilityEffectiveness += effectivenessLoss;
+    //        }
+    //    }
+    //    previousAbility = curAbility;
+    //    abilityEffectiveness = Mathf.Clamp(abilityEffectiveness, 0.1f, 1f);
+    //    return abilityEffectiveness;
+    //}
+
+    /// <summary>
+    /// Update the Ability Power of each ability, with context to the last used ability
+    /// </summary>
+    /// <param name="currentAbility"></param>
+    public void ChangeAbilityPower(CharacterAbility currentAbility)
     {
-        if (previousAbility != null)
+        foreach (CharacterAbility a in GetComponents<CharacterAbility>())
         {
-            if (previousAbility == curAbility)
+            // Check if this is the current ability
+            if (a.GetType() == currentAbility.GetType())
             {
-                abilityEffectiveness -= effectivenessLoss;
+                // Decrease power
+                a.abilityPower -= effectivenessLoss;
+                a.abilityPower = Mathf.Clamp(a.abilityPower, 0.1f, 1f);
             }
             else
             {
-                abilityEffectiveness += effectivenessLoss;
+                // Increase power
+                a.abilityPower += effectivenessLoss;
+                a.abilityPower = Mathf.Clamp(a.abilityPower, 0.1f, 1f);
             }
         }
-        previousAbility = curAbility;
-        abilityEffectiveness = Mathf.Clamp(abilityEffectiveness, 0.1f, 1f);
-        return abilityEffectiveness;
     }
 }

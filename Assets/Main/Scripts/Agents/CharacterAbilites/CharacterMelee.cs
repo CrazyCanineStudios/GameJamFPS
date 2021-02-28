@@ -89,7 +89,10 @@ public class CharacterMelee : CharacterAbility
     {
         isMeleeAttack = true;
         anim.SetTrigger("melee");
-        actualMeleeDamage = meleeDamage * _master.RecieveAbilityEffectiveness(this);
+
+        // Update ability power for this weapon
+        _master.ChangeAbilityPower(this);
+        actualMeleeDamage = meleeDamage * abilityPower;
 
         Debug.Log("Melee Attack");
         // Get all targets inside the melee radius.
