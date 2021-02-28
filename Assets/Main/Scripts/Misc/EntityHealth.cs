@@ -9,6 +9,7 @@ public class EntityHealth : MonoBehaviour
     public GameObject deathPrefab;
     public bool inheritParentScale;
     public float scaleMultiplier;
+    public bool isDead;
 
     void Start()
     {
@@ -37,6 +38,9 @@ public class EntityHealth : MonoBehaviour
             }
         }
 
+        Game.AddScore(1);
+        CharacterMaster.instance.Health.currentHealth += 5;
+        isDead = true;
         Destroy(this.gameObject,0.2f);
     }
 }

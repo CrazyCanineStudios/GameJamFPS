@@ -17,7 +17,7 @@ public class CharacterShoot : CharacterAbility
 
     void Update()
     {
-        if (!AbilityAuthorized) { return; }
+        if (!AbilityAuthorized || Game.isPaused) { return; }
 
         if (Input.GetButtonDown("Fire1") && currentRechargeTime <= 0)
         {
